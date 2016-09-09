@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             version="6"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd">
+    <display-name>DatasourceApllicationXMLTest-ear</display-name>
+    <module>
+        <web>
+            <web-uri>DatasourceApllicationXMLTest-web.war</web-uri>
+            <context-root>/datasource_test</context-root>
+        </web>
+    </module>
+    <module>
+        <ejb>DatasourceApllicationXMLTest-ejb.jar</ejb>
+    </module>
+    <library-directory>lib</library-directory>
+    <data-source>
+        <name>java:jboss/datasources/worldDb</name>
+        <class-name>org.mariadb.jdbc.MariaDbDataSource</class-name>
+        <url>jdbc:mysql://localhost:3306/world</url>
+        <user>root</user>
+        <password>admin</password>
+    </data-source>
+</application>
